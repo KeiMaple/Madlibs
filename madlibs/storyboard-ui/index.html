@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Gothic Storyboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LAYER 0: Interactive Splash Title Screen -->
+  <div id="title-screen-stage" class="full-viewport-stage">
+    <div class="title-action-prompt">CLICK TO PLAY</div>
+  </div>
+
+  <!-- LAYER 0.5: Cinematic Choose Your Story Transition Screen -->
+  <div id="choose-story-stage" class="full-viewport-stage hidden"></div>
+
+  <!-- LAYER 1: Full Screen Cinematic Environment Stage -->
+  <div id="cinematic-stage" class="full-viewport-stage hidden"></div>
+
+  <!-- LAYER 1.5: Main Card Shuffle Picker Screen (3 Cards Deck) -->
+  <div id="main-shuffle-picker-stage" class="full-viewport-stage hidden">
+    <div class="deck-click-container">
+      <div class="deck-trigger-btn" data-story="story1_unrequited-love.txt"></div>
+      <div class="deck-trigger-btn" data-story="story2_mutual-sacrifice.txt"></div>
+      <div class="deck-trigger-btn" data-story="story3_obsessive-illusion.txt"></div>
+    </div>
+  </div>
+
+  <!-- LAYER 2: Immersive Card Shuffle Shaker Stage -->
+  <div id="shuffle-animation-stage" class="full-viewport-stage hidden">
+    <div class="shuffle-card-holder"></div>
+    <div class="shuffle-overlay-text">SHUFFLING PATHWAYS...</div>
+  </div>
+
+  <!-- LAYER 2.5: Scenario Title Intermission Screen -->
+  <div id="scenario-intermission-stage" class="full-viewport-stage hidden"></div>
+
+  <!-- LAYER 4: MASTER FULL SCREEN ORNATE GOTHIC BORDER FRAME VIEW STAGE -->
+  <div id="gothic-frame-stage" class="full-viewport-stage hidden">
+    <div class="frame-content-injector">
+      <h3 id="frame-title">Story Title</h3>
+      
+      <!-- View State A: Dynamic editable text prompt fields form -->
+      <div id="frame-form-view">
+        <div id="dynamic-inputs-container"></div>
+        <button id="generate-story-btn" class="action-btn">Generate Story</button>
+      </div>
+
+      <!-- View State B: Final Assembled Story readout -->
+      <div id="frame-result-view" class="hidden">
+        <pre id="modal-text"></pre>
+        <button id="back-to-form-btn" class="secondary-btn">Edit Inputs</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAYER 3: Interactive Choice Dashboard Menu Panels Layout -->
+  <div id="interactive-dashboard" class="dashboard-root-layout hidden">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="folder-icon">📁</span>
+        <h3>S_PROJECTS</h3>
+      </div>
+      <ul class="file-tree">
+        <li class="folder open">madlibs
+          <ul>
+            <li class="folder open">stories_tragic-romance
+              <ul>
+                <li class="file active">story1_unrequited-love.txt</li>
+                <li class="file">story2_mutual-sacrifice.txt</li>
+                <li class="file">story3_obsessive-illusion.txt</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="canvas-board">
+      <section class="board-group">
+        <h2 class="group-title">Card Shuffle Matrix</h2>
+        <div id="matrix-grid" class="matrix-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
