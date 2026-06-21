@@ -1,6 +1,9 @@
 # Madlibs
 Welcome to my interactive gothic story game! This is a choice-driven dark fantasy card game where you select storyline paths, watch cinematic cards shuffle, and type in your own custom words to change the outcome of tragic romance stories.
 
+Designed in Figma First!
+Before writing a single line of code, the entire user interface, visual identity, and cinematic transition flow were completely designed and mocked up in Figma. The creative journey began on Pinterest, where mood boards were curated to gather visual inspiration and adapt specific dark gothic aesthetic elements. Taking notes from these reference aesthetics and blending them with console video game menus (inspired by games like *NieR*), the layout grids, glassmorphic panels, and the precise placement of the silver corner frames were carefully drafted to capture that immersive dark-fantasy atmosphere.
+
 How the Game Works (The Core Loop)
 The game guides you through a beautiful visual sequence from start to finish:
 1. **Title Screen** — You start on a beautiful gothic cover image (`Main Display.png`). The text `CLICK TO PLAY` pulses at the bottom until you click anywhere on the screen.
